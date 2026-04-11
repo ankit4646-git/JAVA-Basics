@@ -1,31 +1,32 @@
-// WAP to Create a Class with Student Details and Display Them Using Objects
-
 import java.util.*;
 
+class Student {
+    String name;
+    int rollNumber;
+    double marks;
 
-public class Student{
-    String Name ;
-    int Roll_Number ;
-    double Marks ;
-
-    public void Info(){
-        System.out.println("The Name of The Student is: " + this.Name);
-        System.out.println("The Age of The Student is: " + this.Age);
-        System.out.println("The Marks of The Student is: " + this.Marks);
+    public void info() {
+        System.out.println("The Name of the Student is: " + this.name);
+        System.out.println("The Roll Number of the Student is: " + this.rollNumber);
+        System.out.println("The Marks of the Student is: " + this.marks);
     }
 }
 
-public class Data {
-    public static void main(String[] args){
+public class Student_Record { 
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Student s1 = new Student();
-        System.out.println("Enter The Student Name:");
-        s1.name = sc.newLine();
-        System.out.println("Enter the Roll Number:");
-        s1.Roll_Number = sc.newInt();
-        System.out.println("Enter The Marks:");
-        s1.Marks = sc.newDouble();
 
-        s1.Info();
+        System.out.println("Enter The Student Name:");
+        s1.name = sc.nextLine();
+
+        System.out.println("Enter The Roll Number:");
+        s1.rollNumber = sc.nextInt();
+
+        System.out.println("Enter The Marks:");
+        s1.marks = sc.nextDouble();
+
+        s1.info();
+        sc.close();
     }
 }
